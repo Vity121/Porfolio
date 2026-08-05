@@ -85,15 +85,8 @@ article p {
     border: 2px solid black;
     border-radius: 5px;
     box-shadow: 4px 4px white;
-    cursor: pointer;
-    transform-style: preserve-3d;
-  /* Registramos la transición para el transform y para el posicionamiento */
-  transition: 
-    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-    top 0.6s ease,
-    left 0.6s ease;
+    transition: transform 0.3s ease;
 }
-
 
 .tarjeta:hover {
     transform: translateY(-10px);
@@ -135,6 +128,7 @@ article p {
     border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 4px 4px white;
+    transition: transform 0.3s ease;
 }
 
 .tarjeta-premios a {
@@ -155,6 +149,11 @@ article p {
     color: var(--amarillo);
 }
 
+.tarjeta-premios:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
+}
+
 .certificados {
     display: flex;
     flex-direction: row;
@@ -168,6 +167,14 @@ article p {
     width: 70%;
     background: var(--morado-claro);
     color: black;
+    box-shadow: 4px 4px var(--amarillo);
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+#tituloPlatzi:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
 }
 
 #tituloUdemy {
@@ -177,6 +184,14 @@ article p {
     width: 70%;
     background: var(--morado-claro);
     color: black;
+    box-shadow: 4px 4px var(--amarillo);
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+#tituloUdemy:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
 }
 
 #tituloIBM {
@@ -186,6 +201,13 @@ article p {
     width: 70%;
     background: var(--morado-claro);
     color: black;
+    box-shadow: 4px 4px var(--amarillo);
+    transition: transform 0.3s ease;
+}
+
+#tituloIBM:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
 }
 
 .contenedor-global-platzi{
@@ -350,6 +372,7 @@ article p {
     border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 4px 4px white;
+    transition: transform 0.3s ease;
 }
 
 .tarjeta-webs a {
@@ -367,4 +390,9 @@ article p {
 
 .tarjeta-webs h5 {
     font-size: 1rem;
+}
+
+.tarjeta-webs:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
 }
