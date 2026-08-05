@@ -9,6 +9,11 @@
     --amarillo: yellow;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: "Story Script", sans-serif;
+    color: var(--amarillo);
+}
+
 body {
     background: linear-gradient(to bottom right, var(--morado), var(--lila), var(--morado-claro));
 }
@@ -53,6 +58,10 @@ article {
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+article p {
+    color: white;
 }
 
 .contenedor-tarjetas {
@@ -158,6 +167,7 @@ article {
     border: 2px solid var(--morado);
     width: 70%;
     background: var(--morado-claro);
+    color: black;
 }
 
 #tituloUdemy {
@@ -166,6 +176,7 @@ article {
     border: 2px solid var(--morado);
     width: 70%;
     background: var(--morado-claro);
+    color: black;
 }
 
 #tituloIBM {
@@ -174,6 +185,7 @@ article {
     border: 2px solid var(--morado);
     width: 70%;
     background: var(--morado-claro);
+    color: black;
 }
 
 .contenedor-global-platzi{
