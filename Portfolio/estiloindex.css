@@ -1,0 +1,307 @@
+:root {
+    --morado: #540863;
+    --lavanda: #92487A;
+    --rosa: #E49BA6;
+    --rosa-claro: #FFD3D5;
+    --purpura: #5D3587;
+    --lila: #A367B1;
+}
+
+body {
+    background: linear-gradient(var(--rosa), var(--rosa-claro)) ;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+        color: black;
+}
+
+header h1 {
+    font-size: 5rem;
+    margin-bottom: 0px;
+}
+
+header h2 {
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+
+main article h3 {
+    font-size: 2rem;
+}
+
+main article h4 {
+    font-size: 1.75rem;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedor-tarjetas {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    perspective: 1000px;
+}
+
+.tarjeta {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 4px 4px gray;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  /* Registramos la transición para el transform y para el posicionamiento */
+  transition: 
+    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    top 0.6s ease,
+    left 0.6s ease;
+}
+
+.tarjeta.is-active {
+  position: fixed;
+  width: 250px; 
+  height: 350px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  /* IMPORTANTE: Aquí anulamos el translateY del hover 
+     y aplicamos el giro + escala juntos */
+  transform: rotateY(180deg) scale(1.5); 
+}
+
+.tarjeta.is-active:hover {
+  transform: rotateY(180deg) scale(1.5); /* Se queda fija en su estado de zoom */
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
+}
+
+.premios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.margenes-premios{
+    margin-bottom: 0px;
+}
+
+.contenedor-tarjetas-premios {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tarjeta-premios h4 {
+    font-size: 1.25rem;
+}
+
+.tarjeta-premios{
+    width: 90%;
+    text-align: left;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px gray;
+}
+
+.tarjeta-premios a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--rosa);
+}
+
+.tarjeta-premios h5 {
+    font-size: 1rem;
+}
+
+.certificados {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contenedor-tarjetas-platzi {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--morado);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contenedor-tarjetas-udemy {
+    align-items: center;
+    text-align: center;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--morado);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contenedor-tarjetas-ibm {
+    align-items: center;
+    text-align: center;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--morado);
+    border-radius: 5px;
+    padding: 20px;
+    height: 10%;
+}
+
+
+.tarjeta-platzi{
+    width: 70%;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px 10px;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px gray;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-platzi:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
+}
+
+.tarjeta-platzi a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta-udemy{
+    width: 70%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px 10px;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px gray;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-udemy:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
+}
+
+.tarjeta-udemy a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta-ibm{
+    width: 70%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px 10px;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px gray;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-ibm:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px black;
+}
+
+.tarjeta-ibm a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor-tarjetas-webs {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tarjeta-webs{
+    width: 90%;
+    text-align: left;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    padding: 10px;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px gray;
+}
+
+.tarjeta-webs a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--rosa);
+}
+
+.tarjeta-webs h4 {
+    font-size: 1.25rem;
+}
+
+.tarjeta-webs h5 {
+    font-size: 1rem;
+}
