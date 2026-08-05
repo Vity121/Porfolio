@@ -5,10 +5,12 @@
     --rosa-claro: #FFD3D5;
     --purpura: #5D3587;
     --lila: #A367B1;
+    --morado-claro: #EBD3F8;
+    --amarillo: yellow;
 }
 
 body {
-    background: linear-gradient(var(--rosa), var(--rosa-claro)) ;
+    background: linear-gradient(to bottom right, var(--morado), var(--lila), var(--morado-claro));
 }
 
 header {
@@ -68,11 +70,12 @@ article {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
     padding: 10px 10px;
-    border: 2px solid white;
+    color: white;
+    border: 2px solid black;
     border-radius: 5px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
     cursor: pointer;
     transform-style: preserve-3d;
   /* Registramos la transición para el transform y para el posicionamiento */
@@ -82,23 +85,6 @@ article {
     left 0.6s ease;
 }
 
-.tarjeta.is-active {
-  position: fixed;
-  width: 250px; 
-  height: 350px;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  z-index: 100;
-
-  /* IMPORTANTE: Aquí anulamos el translateY del hover 
-     y aplicamos el giro + escala juntos */
-  transform: rotateY(180deg) scale(1.5); 
-}
-
-.tarjeta.is-active:hover {
-  transform: rotateY(180deg) scale(1.5); /* Se queda fija en su estado de zoom */
-}
 
 .tarjeta:hover {
     transform: translateY(-10px);
@@ -133,12 +119,13 @@ article {
     width: 90%;
     text-align: left;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
+    color: white;
     padding: 10px;
-    border: 2.5px solid white;
+    border: 2.5px solid black;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
 }
 
 .tarjeta-premios a {
@@ -150,8 +137,13 @@ article {
     color: var(--rosa);
 }
 
+.tarjeta-premios h4 {
+    color: var(--amarillo);
+}
+
 .tarjeta-premios h5 {
     font-size: 1rem;
+    color: var(--amarillo);
 }
 
 .certificados {
@@ -160,52 +152,108 @@ article {
     gap: 20px;
 }
 
+#tituloPlatzi {
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid var(--morado);
+    width: 70%;
+    background: var(--morado-claro);
+}
+
+#tituloUdemy {
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid var(--morado);
+    width: 70%;
+    background: var(--morado-claro);
+}
+
+#tituloIBM {
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid var(--morado);
+    width: 70%;
+    background: var(--morado-claro);
+}
+
+.contenedor-global-platzi{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenedor-global-udemy{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenedor-global-ibm{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .contenedor-tarjetas-platzi {
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 33%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--morado);
     border-radius: 5px;
     padding: 20px;
+    border: 2px solid var(--morado);
+    background: var(--morado-claro);
 }
 
 .contenedor-tarjetas-udemy {
     align-items: center;
     text-align: center;
-    width: 33%;
+    justify-content: center;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--morado);
     border-radius: 5px;
     padding: 20px;
+    border: 2px solid var(--morado);
+    background: var(--morado-claro);
 }
 
 .contenedor-tarjetas-ibm {
     align-items: center;
     text-align: center;
-    width: 33%;
+    justify-content: center;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--morado);
     border-radius: 5px;
     padding: 20px;
-    height: 10%;
+    border: 2px solid var(--morado);
+    background: var(--morado-claro);
 }
 
+.oculto{
+    display: none;
+}
+
+#tituloPlatzi {
+    display: flex;
+    flex-direction: column;
+}
 
 .tarjeta-platzi{
     width: 70%;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
+    color: white;
     padding: 10px 10px;
-    border: 2.5px solid white;
+    border: 2.5px solid black;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
@@ -224,12 +272,13 @@ article {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
+    color: white;
     padding: 10px 10px;
-    border: 2.5px solid white;
+    border: 2.5px solid black;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
@@ -248,12 +297,13 @@ article {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
+    color: white;
     padding: 10px 10px;
-    border: 2.5px solid white;
+    border: 2.5px solid black;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
@@ -281,12 +331,13 @@ article {
     width: 90%;
     text-align: left;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--lavanda), var(--lila));
+    background: linear-gradient(to bottom right, var(--morado), var(--lila));
+    color: white;
     padding: 10px;
-    border: 2.5px solid white;
+    border: 2.5px solid black;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 4px 4px white;
 }
 
 .tarjeta-webs a {
