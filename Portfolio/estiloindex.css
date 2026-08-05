@@ -64,6 +64,18 @@ article p {
     color: white;
 }
 
+.contenedor-contacto{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+.iconos-contacto{
+    height: 33px;
+    width: 33px;
+}
+
 .contenedor-tarjetas {
     align-items: center;
     text-align: center;
