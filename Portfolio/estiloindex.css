@@ -121,6 +121,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 8px 20px;
 }
 
@@ -190,10 +191,15 @@ article p {
     transition: transform 0.3s ease;
 }
 
+.tarjeta-conocimientos p{
+    font-family: "Story Script", sans-serif;
+}
+
 .tarjeta-conocimientos:hover {
     transform: translateY(-10px);
     box-shadow: 0px 5px var(--purpura);
-    background: var(--lila);
+    background: var(--nuevo3);
+    border: 2px solid var(--nuevo1);
 }
 
 .tarjeta-conocimientos:hover p{
