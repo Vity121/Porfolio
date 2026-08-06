@@ -1,21 +1,27 @@
 :root {
     --morado: #540863;
-    --lavanda: #92487A;
+    --lavanda: #DDD6FE;
     --rosa: #E49BA6;
     --rosa-claro: #FFD3D5;
     --purpura: #5D3587;
     --lila: #A367B1;
     --morado-claro: #EBD3F8;
     --amarillo: yellow;
+    --nuevo1: #1E1B4B;
+    --nuevo2: #6D28D9;
+    --nuevo3: #8B5CF6;
+    --nuevo4: #F8FAFC;
+    --nuevo5: #0F172A;
+    --blanco: #F8FAFC;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: "Story Script", sans-serif;
-    color: var(--amarillo);
+    color: var(--nuevo1);
 }
 
 body {
-    background: linear-gradient(to bottom right, var(--morado), var(--lila), var(--morado-claro));
+    background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--nuevo2) 100%);
     margin: 0;
     padding: 0;
 }
@@ -23,7 +29,7 @@ body {
 header h1 {
     font-size: 3rem;
     margin-bottom: 0px;
-    color: var(--morado);
+    color: var(--morado-claro);
     margin: 0;
 }
 
@@ -48,7 +54,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-        color: black;
+    color: black;
 }
 
 .banner{
@@ -56,7 +62,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--amarillo);
+  background-color: var(--nuevo1);
   padding: 0px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -91,7 +97,7 @@ article {
 }
 
 article p {
-    color: white;
+    color: var(--nuevo5);
 }
 
 .contenedor-contacto{
@@ -106,7 +112,7 @@ article p {
     width: 33px;
 }
 
-.contenedor-tarjetas {
+.contenedor-conocimientos {
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -116,22 +122,38 @@ article p {
     gap: 20px;
 }
 
-.tarjeta {
+.estilo-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--nuevo4) 100%);
+    box-shadow: 5px 5px rgba(109, 40, 217, 0.12);
+    color: var(--nuevo5);
+    border: 3px solid var(--morado-claro);
+    border-radius: 16px;
+}
+
+.estilo-card-certificados {
+    background: linear-gradient(135deg, var(--nuevo1) 0%, var(--purpura) 60%, var(--nuevo2) 100%);
+    box-shadow: 5px 5px var(--nuevo1);
+    color: var(--blanco);
+    border: 3px solid var(--nuevo3);
+    border-radius: 16px;
+}
+
+.tarjeta-conocimientos {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
     padding: 10px 10px;
-    color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
-.tarjeta:hover {
+.tarjeta-conocimientos:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
+    background: var(--lila);
+}
+
+.tarjeta-conocimientos:hover p{
+    color: var(--blanco);
 }
 
 .premios {
@@ -162,13 +184,8 @@ article p {
     width: 90%;
     text-align: left;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
-    color: white;
     padding: 10px;
-    border: 2.5px solid black;
-    border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
@@ -178,21 +195,21 @@ article p {
     margin-top: 0px;
     padding: 5px;
     text-decoration: none;
-    color: var(--rosa);
+    color: var(--nuevo2);
 }
 
 .tarjeta-premios h4 {
-    color: var(--amarillo);
+    color: var(--nuevo1);
 }
 
 .tarjeta-premios h5 {
     font-size: 1rem;
-    color: var(--amarillo);
+    color: var(--nuevo1);
 }
 
 .tarjeta-premios:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
 }
 
 .certificados {
@@ -202,68 +219,44 @@ article p {
 }
 
 #tituloPlatzi {
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
     width: 70%;
-    background: var(--morado-claro);
-    color: black;
-    box-shadow: 4px 4px var(--amarillo);
     margin-right: 20px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 #tituloPlatzi:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
 }
 
 #tituloUdemy {
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
     width: 70%;
-    background: var(--morado-claro);
-    color: black;
-    box-shadow: 4px 4px var(--amarillo);
     margin-right: 20px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 #tituloUdemy:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
 }
 
 #tituloIBM {
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
     width: 70%;
-    background: var(--morado-claro);
-    color: black;
-    box-shadow: 4px 4px var(--amarillo);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 #tituloIBM:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
 }
 
-.contenedor-global-platzi{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.contenedor-global-udemy{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.contenedor-global-ibm{
+.contenedor-global-certificados{
     display: flex;
     flex-direction: column;
     
@@ -276,10 +269,7 @@ article p {
     width: 70%;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
-    background: var(--morado-claro);
 }
 
 .contenedor-tarjetas-udemy {
@@ -289,10 +279,7 @@ article p {
     width: 70%;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
-    background: var(--morado-claro);
 }
 
 .contenedor-tarjetas-ibm {
@@ -302,10 +289,7 @@ article p {
     width: 70%;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     padding: 20px;
-    border: 2px solid var(--morado);
-    background: var(--morado-claro);
 }
 
 .oculto{
@@ -322,19 +306,14 @@ article p {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
-    color: white;
     padding: 10px 10px;
-    border: 2.5px solid black;
-    border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
 .tarjeta-platzi:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--lila);
 }
 
 .tarjeta-platzi a {
@@ -347,19 +326,14 @@ article p {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
-    color: white;
     padding: 10px 10px;
-    border: 2.5px solid black;
-    border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
 .tarjeta-udemy:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--lila);
 }
 
 .tarjeta-udemy a {
@@ -372,19 +346,14 @@ article p {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
-    color: white;
     padding: 10px 10px;
-    border: 2.5px solid black;
-    border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
 .tarjeta-ibm:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--lila);
 }
 
 .tarjeta-ibm a {
@@ -406,13 +375,8 @@ article p {
     width: 90%;
     text-align: left;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--morado), var(--lila));
-    color: white;
     padding: 10px;
-    border: 2.5px solid black;
-    border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 4px 4px white;
     transition: transform 0.3s ease;
 }
 
@@ -422,7 +386,7 @@ article p {
     margin-top: 0px;
     padding: 5px;
     text-decoration: none;
-    color: var(--rosa);
+    color: var(--nuevo2);
 }
 
 .tarjeta-webs h4 {
@@ -435,5 +399,5 @@ article p {
 
 .tarjeta-webs:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 5px black;
+    box-shadow: 0px 5px var(--purpura);
 }
