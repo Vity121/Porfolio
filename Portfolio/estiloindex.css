@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5 {
     color: var(--nuevo1);
 }
 
+h3[id]{
+    scroll-margin-top: 120px;
+}
+
 body {
     background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--nuevo2) 100%);
     margin: 0;
@@ -35,6 +39,46 @@ header h1 {
 
 header h2 {
     font-size: 3rem;
+}
+
+.frase-definitoria p{
+    color: var(--morado-claro);
+    font-style: italic;
+    font-family: "Story Script", sans-serif;
+}
+
+.contenedor-botones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 5px;
+}
+
+.botones{
+    display: flex;
+    width: 100%;
+}
+
+.botones a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--nuevo4) 100%);
+    box-shadow: 3px 3px var(--morado-claro);
+    color: var(--nuevo5);
+    border: 2px solid var(--nuevo2);
+    border-radius: 16px;
+    padding: 5px 8px;
+}
+
+.botones:hover a{
+    background: var(--nuevo3);
+    box-shadow: 3px 3px var(--nuevo3);
+    color: var(--blanco);
+    border: 2px solid var(--nuevo1);
 }
 
 main article h2 {
