@@ -147,15 +147,14 @@ article p {
     color: var(--nuevo5);
 }
 
-.texto-html, .texto-css, .texto-js, .texto-java, .texto-python, .texto-mysql{
+.texto-html, .texto-css, .texto-js{
     position: fixed;
-    top: 20%;
-    left: 20%;
+    left: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 23%;
     box-sizing: border-box;
     background: var(--nuevo3);
     box-shadow: 3px 3px var(--nuevo3);
@@ -163,6 +162,67 @@ article p {
     border: 2px solid var(--nuevo1);
     border-radius: 16px;
     padding: 5px 8px;
+}
+
+.texto-java, .texto-python, .texto-mysql{
+    position: fixed;
+    top: 20%;
+    left: 76%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    box-sizing: border-box;
+    background: var(--nuevo3);
+    box-shadow: 3px 3px var(--nuevo3);
+    color: var(--blanco);
+    border: 2px solid var(--nuevo1);
+    border-radius: 16px;
+    padding: 5px 8px;
+}
+
+.texto-html{
+    top: 24%;
+    z-index: 2000;
+}
+
+.texto-css{
+    top: 39%;
+    z-index: 2000;
+}
+
+.texto-js{
+    top: 52%;
+    z-index: 2000;
+}
+
+.texto-java{
+    top: 24%;
+    z-index: 2000;
+}
+
+.texto-python{
+    top: 37%;
+    z-index: 2000;
+}
+
+.texto-mysql{
+    top: 52%;
+    z-index: 2000;
+}
+
+.texto-html h4, .texto-css h4, .texto-js h4, .texto-java h4, .texto-python h4, .texto-mysql h4{
+    font-size: 2rem;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.texto-html p, .texto-css p, .texto-js p, .texto-java p, .texto-python p, .texto-mysql p{
+    text-align: center;
+    font-weight: bold;
 }
 
 .contenedor-contacto{
@@ -207,12 +267,14 @@ article p {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 10px 10px;
+    padding: 0px 10px;
     transition: transform 0.3s ease;
 }
 
-.tarjeta-conocimientos p{
+.tarjeta-conocimientos h4{
     font-family: "Story Script", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .tarjeta-conocimientos:hover {
@@ -464,4 +526,11 @@ article p {
 .tarjeta-webs:hover{
     transform: translateY(-10px);
     box-shadow: 0px 5px var(--purpura);
+}
+
+.fondo-hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px var(--purpura);
+    background: var(--nuevo3);
+    border: 2px solid var(--nuevo1);
 }
