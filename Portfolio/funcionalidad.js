@@ -55,12 +55,15 @@ const seccion_ibm = document.querySelector('.contenedor-tarjetas-ibm');
 
 titulo_platzi.addEventListener('click', () => {
   seccion_platzi.classList.toggle('oculto');
+  titulo_platzi.classList.toggle('hover-titulos');
 });
 
 titulo_udemy.addEventListener('click', () => {
   seccion_udemy.classList.toggle('oculto');
+  titulo_udemy.classList.toggle('hover-titulos');
 });
 
 titulo_ibm.addEventListener('click', () => {
   seccion_ibm.classList.toggle('oculto');
+  titulo_ibm.classList.toggle('hover-titulos');
 });

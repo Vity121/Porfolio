@@ -534,3 +534,8 @@ article p {
     background: var(--nuevo3);
     border: 2px solid var(--nuevo1);
 }
+
+.hover-titulos{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px var(--purpura);
+}
