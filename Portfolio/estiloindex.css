@@ -539,3 +539,85 @@ article p {
     transform: translateY(-10px);
     box-shadow: 0px 5px var(--purpura);
 }
+
+
+
+/* ==========================================================================
+   1. PANTALLAS GRANDES / PC (Más de 1025px)
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+  /* Aquí van tus reglas actuales para posicionar las cajas a los lados */
+  .texto-html, .texto-css, .texto-js {
+    left: 1%;
+  }
+  .texto-java, .texto-python, .texto-mysql {
+    left: 76%;
+  }
+  .contenedor-conocimientos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   2. TABLETS (Entre 601px y 1024px)
+   ========================================================================== */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .contenedor-conocimientos {
+    width: 80%;
+  }
+
+  header h1{
+    font-size: 2rem;
+  }
+
+  div[class^="texto-"] {
+    position: fixed;
+    left: 50% !important;
+    top: 40% !important;
+    transform: translateX(-50%);
+    width: 60%;
+  }
+
+  h3[id] {
+    scroll-margin-top: 180px;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .contenedor-botones{
+    gap: 5px;
+    padding: 2px;
+    }
+
+  .botones a{
+    box-shadow: 2px 2px var(--morado-claro);
+    border: 1px solid var(--nuevo2);
+    border-radius: 16px;
+    padding: 3px 5px;
+}
+}
+
+/* ==========================================================================
+   3. MÓVILES (Hasta 600px)
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+  .contenedor-conocimientos {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Cajas como tarjeta emergente abajo */
+  div[class^="texto-"] {
+    position: fixed;
+    bottom: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  h3[id] {
+    scroll-margin-top: 180px;
+  }
+}
