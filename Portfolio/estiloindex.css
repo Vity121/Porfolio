@@ -1,3 +1,8 @@
+/* RESET UNIVERSAL OBLIGATORIO PARA EVITAR DESBORDAMIENTOS */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --morado: #540863;
     --lavanda: #DDD6FE;
@@ -15,6 +20,18 @@
     --blanco: #F8FAFC;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--nuevo2) 100%);
+}
+
 h1, h2, h3, h4, h5 {
     font-family: "Story Script", sans-serif;
     color: var(--nuevo1);
@@ -22,14 +39,6 @@ h1, h2, h3, h4, h5 {
 
 h3[id]{
     scroll-margin-top: 120px;
-}
-
-body {
-    background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--nuevo2) 100%);
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
 
 header h1 {
@@ -348,6 +357,7 @@ article p {
 }
 
 #tituloPlatzi {
+    align-items: center;
     padding: 20px;
     width: 70%;
     margin-right: 20px;
@@ -363,11 +373,14 @@ article p {
 }
 
 #tituloUdemy {
+    align-items: center;
     padding: 20px;
     width: 70%;
     margin-right: 20px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 #tituloUdemy:hover {
@@ -380,6 +393,14 @@ article p {
     width: 70%;
     transition: transform 0.3s ease;
     cursor: pointer;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 #tituloIBM:hover {
@@ -389,8 +410,7 @@ article p {
 
 .contenedor-global-certificados{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .contenedor-tarjetas-platzi {
@@ -557,47 +577,79 @@ article p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 /* ==========================================================================
    2. TABLETS (Entre 601px y 1024px)
    ========================================================================== */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-    .contenedor-conocimientos {
-    width: 80%;
+
+  .banner-content {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
   }
 
-  header h1{
+  header h1 {
     font-size: 2rem;
+    margin-top: 10px;
   }
 
+  h3{
+    font-size: 1.25rem;
+  }
+
+  .contenedor-botones {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 0;
+  }
+
+  .contenedor-conocimientos {
+    width: 85%;
+  }
+
+  /* Cajas de texto emergentes en tablet */
   div[class^="texto-"] {
     position: fixed;
     left: 50% !important;
-    top: 40% !important;
-    transform: translateX(-50%);
-    width: 60%;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 500px;
   }
 
   h3[id] {
     scroll-margin-top: 180px;
   }
 
-  body {
-    overflow-x: hidden;
-    max-width: 100%;
-  }
-
-  .contenedor-botones{
-    gap: 5px;
-    padding: 2px;
-    }
-
-  .botones a{
+  .botones a {
     box-shadow: 2px 2px var(--morado-claro);
     border: 1px solid var(--nuevo2);
     border-radius: 16px;
-    padding: 3px 5px;
-}
+    padding: 5px 3px;
+    font-size: 0.9rem;
+  }
+
+  .botones:hover a {
+    box-shadow: 2px 2px var(--nuevo3);
+    border: 1px solid var(--nuevo1);
+  }
+
+  .contenedor-global-certificados{
+    gap: 0px;
+  }
+
+  .certificados{
+    flex-direction: column;
+  }
+
+  #tituloPlatzi, #tituloUdemy, #tituloIBM{
+    width: 100%;
+  }
+
+  .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm{
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
