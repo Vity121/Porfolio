@@ -23,7 +23,6 @@
 html, body {
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -584,7 +583,7 @@ article p {
 
   .banner-content {
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
   }
 
@@ -656,20 +655,62 @@ article p {
    3. MÓVILES (Hasta 600px)
    ========================================================================== */
 @media screen and (max-width: 600px) {
+  .banner-content{
+    flex-direction: column;
+    padding: 2px;
+  }
+
+  .contenedor-botones{
+    display: none;
+  }
+
+  header h1 {
+    font-size: 1.40rem;
+    margin-top: 10px;
+  }
+
+  main article h3 {
+    font-size: 1.40rem;
+  }
+
   .contenedor-conocimientos {
     width: 95%;
     grid-template-columns: repeat(2, 1fr);
   }
+
   /* Cajas como tarjeta emergente abajo */
   div[class^="texto-"] {
     position: fixed;
-    bottom: 15px !important;
     left: 50% !important;
-    transform: translateX(-50%);
-    width: 90%;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 500px;
   }
 
   h3[id] {
     scroll-margin-top: 180px;
+  }
+
+  .contenedor-global-certificados{
+    gap: 0px;
+  }
+
+  .certificados{
+    flex-direction: column;
+  }
+
+  #tituloPlatzi, #tituloUdemy, #tituloIBM{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contenedor-contacto{
+    flex-direction: column;
   }
 }
