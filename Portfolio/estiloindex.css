@@ -153,6 +153,7 @@ article {
 
 article p {
     color: var(--nuevo5);
+    font-family: Tahoma, sans-serif, Verdana;
 }
 
 .texto-html, .texto-css, .texto-js{
@@ -238,6 +239,14 @@ article p {
     flex-direction: row;
     padding: 0px;
     gap: 20px;
+}
+
+.contacto-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .iconos-contacto{
@@ -559,12 +568,36 @@ article p {
     box-shadow: 0px 5px var(--purpura);
 }
 
+#Boton-llamar {
+    padding: 2px;
+    text-decoration: none
+}
 
+#Boton-llamar:hover {
+    background: var(--nuevo3);
+    color: var(--blanco);
+    border: 2px solid var(--nuevo1);
+}
+
+#Boton-correo {
+    padding: 2px;
+    text-decoration: none
+}
+
+#Boton-correo:hover {
+    background: var(--nuevo3);
+    color: var(--blanco);
+    border: 2px solid var(--nuevo1);
+}
+
+#Instagram {
+    cursor: pointer;
+}
 
 /* ==========================================================================
    1. PANTALLAS GRANDES / PC (Más de 1025px)
    ========================================================================== */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   /* Aquí van tus reglas actuales para posicionar las cajas a los lados */
   .texto-html, .texto-css, .texto-js {
     left: 1%;
@@ -574,6 +607,9 @@ article p {
   }
   .contenedor-conocimientos {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #Boton-llamar {
+    display: none;
   }
 }
 /* ==========================================================================
@@ -649,6 +685,10 @@ article p {
   .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm{
     width: 100%;
   }
+
+  #Boton-llamar {
+    display: inline-block;
+  }
 }
 
 /* ==========================================================================
@@ -712,5 +752,13 @@ article p {
 
   .contenedor-contacto{
     flex-direction: column;
+  }
+
+  #Boton-llamar {
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
 }

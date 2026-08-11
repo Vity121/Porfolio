@@ -67,3 +67,32 @@ titulo_ibm.addEventListener('click', () => {
   seccion_ibm.classList.toggle('oculto');
   titulo_ibm.classList.toggle('hover-titulos');
 });
+
+const telefono = document.querySelector('#Boton-llamar')
+
+telefono.addEventListener('click', function(e) {
+  // Comprobamos si el dispositivo es un teléfono/móvil
+  const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if (!esMovil) {
+    // Si NO es móvil, bloqueamos la acción por defecto
+    e.preventDefault();
+    alert('Esta función solo está disponible en dispositivos móviles.');
+  }
+});
+
+const imagenInstagram = document.querySelector('#Instagram');
+const rutaOriginal = "media/instagram.png";
+const rutaHover = "media/instagram-color.png";
+
+// Cuando el ratón entra en la imagen
+imagenInstagram.addEventListener('mouseenter', () => {
+  console.log("1");
+  imagenInstagram.src = rutaHover;
+});
+
+// Cuando el ratón sale de la imagen
+imagenInstagram.addEventListener('mouseleave', () => {
+  imagenInstagram.src = rutaOriginal;
+  console.log("2");
+});
