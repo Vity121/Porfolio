@@ -1,4 +1,6 @@
-/* RESET UNIVERSAL OBLIGATORIO PARA EVITAR DESBORDAMIENTOS */
+/* ==========================================================================
+   RESET UNIVERSAL OBLIGATORIO PARA EVITAR DESBORDAMIENTOS
+   ========================================================================== */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -6,20 +8,19 @@
 :root {
     --morado: #540863;
     --lavanda: #DDD6FE;
-    --rosa: #E49BA6;
-    --rosa-claro: #FFD3D5;
     --purpura: #5D3587;
     --lila: #A367B1;
     --morado-claro: #EBD3F8;
-    --amarillo: yellow;
-    --nuevo1: #1E1B4B;
-    --nuevo2: #6D28D9;
-    --nuevo3: #8B5CF6;
-    --nuevo4: #F8FAFC;
-    --nuevo5: #0F172A;
+    --indigo: #1E1B4B;
+    --morado-neon: #6D28D9;
+    --purpura-claro: #8B5CF6;
+    --negro-carbon: #0F172A;
     --blanco: #F8FAFC;
 }
 
+/* ==========================================================================
+   CONFIGURACIONES DEL BODY Y GLOBALES
+   ========================================================================== */
 html, body {
     width: 100%;
     max-width: 100vw;
@@ -28,16 +29,50 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--nuevo2) 100%);
+    background: linear-gradient(to bottom right, var(--blanco) 0%, var(--lavanda) 50%, var(--morado-neon) 100%);
 }
 
 h1, h2, h3, h4, h5 {
     font-family: "Story Script", sans-serif;
-    color: var(--nuevo1);
+    color: var(--indigo);
 }
 
 h3[id]{
     scroll-margin-top: 120px;
+}
+
+/* ==========================================================================
+   CONFIGURACIONES DEL HEADER Y SU BANNER
+   ========================================================================== */
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+}
+
+.banner{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--indigo);
+  padding: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.banner h2 {
+    color: var(--morado);
+    margin: 0;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
 }
 
 header h1 {
@@ -76,21 +111,24 @@ header h2 {
     width: 100%;
     box-sizing: border-box;
     text-decoration: none;
-    background: linear-gradient(135deg, #FFFFFF 0%, var(--nuevo4) 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--blanco) 100%);
     box-shadow: 3px 3px var(--morado-claro);
-    color: var(--nuevo5);
-    border: 2px solid var(--nuevo2);
+    color: var(--negro-carbon);
+    border: 2px solid var(--morado-neon);
     border-radius: 16px;
     padding: 5px 8px;
 }
 
 .botones:hover a{
-    background: var(--nuevo3);
-    box-shadow: 3px 3px var(--nuevo3);
+    background: var(--purpura-claro);
+    box-shadow: 3px 3px var(--purpura-claro);
     color: var(--blanco);
-    border: 2px solid var(--nuevo1);
+    border: 2px solid var(--indigo);
 }
 
+/* ==========================================================================
+   CONFIGURACIONES GENERALES DEL MAIN Y EL ARTICLE
+   ========================================================================== */
 main article h2 {
     font-size: 3rem;
     margin-bottom: 0px;
@@ -102,37 +140,6 @@ main article h3 {
 
 main article h4 {
     font-size: 1.75rem;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: black;
-}
-
-.banner{
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--nuevo1);
-  padding: 0px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.banner h2 {
-    color: var(--morado);
-    margin: 0;
-}
-
-.banner-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 20px;
 }
 
 main {
@@ -152,8 +159,77 @@ article {
 }
 
 article p {
-    color: var(--nuevo5);
+    color: var(--negro-carbon);
     font-family: Tahoma, sans-serif, Verdana;
+}
+
+/* ==========================================================================
+   CONFIGURACIONES GLOBALES DE ESTILOS DE CARDS
+   ========================================================================== */
+.estilo-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--blanco) 100%);
+    box-shadow: 5px 5px rgba(109, 40, 217, 0.12);
+    color: var(--negro-carbon);
+    border: 3px solid var(--morado-claro);
+    border-radius: 16px;
+}
+
+.estilo-card-certificados {
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--purpura) 60%, var(--morado-neon) 100%);
+    box-shadow: 5px 5px var(--indigo);
+    color: var(--blanco);
+    border: 3px solid var(--purpura-claro);
+    border-radius: 16px;
+}
+
+.fondo-hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px var(--purpura);
+    background: var(--purpura-claro);
+    border: 2px solid var(--indigo);
+}
+
+.hover-titulos{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px var(--purpura);
+}
+
+/* ==========================================================================
+   CONFIGURACIONES DE LA SECCIÓN CONOCIMIENTOS
+   ========================================================================== */
+.contenedor-conocimientos {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-conocimientos {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 10px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-conocimientos h4{
+    font-family: "Story Script", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.tarjeta-conocimientos:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px var(--purpura);
+    background: var(--purpura-claro);
+    border: 2px solid var(--indigo);
+}
+
+.tarjeta-conocimientos:hover p{
+    color: var(--blanco);
 }
 
 .texto-html, .texto-css, .texto-js{
@@ -165,10 +241,10 @@ article p {
     justify-content: center;
     width: 23%;
     box-sizing: border-box;
-    background: var(--nuevo3);
-    box-shadow: 3px 3px var(--nuevo3);
+    background: var(--purpura-claro);
+    box-shadow: 3px 3px var(--purpura-claro);
     color: var(--blanco);
-    border: 2px solid var(--nuevo1);
+    border: 2px solid var(--indigo);
     border-radius: 16px;
     padding: 5px 8px;
 }
@@ -183,10 +259,10 @@ article p {
     justify-content: center;
     width: 23%;
     box-sizing: border-box;
-    background: var(--nuevo3);
-    box-shadow: 3px 3px var(--nuevo3);
+    background: var(--purpura-claro);
+    box-shadow: 3px 3px var(--purpura-claro);
     color: var(--blanco);
-    border: 2px solid var(--nuevo1);
+    border: 2px solid var(--indigo);
     border-radius: 16px;
     padding: 5px 8px;
 }
@@ -234,77 +310,9 @@ article p {
     font-weight: bold;
 }
 
-.contenedor-contacto{
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-    gap: 20px;
-}
-
-.contacto-botones{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.iconos-contacto{
-    height: 33px;
-    width: 33px;
-}
-
-.contenedor-conocimientos {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.estilo-card {
-    background: linear-gradient(135deg, #FFFFFF 0%, var(--nuevo4) 100%);
-    box-shadow: 5px 5px rgba(109, 40, 217, 0.12);
-    color: var(--nuevo5);
-    border: 3px solid var(--morado-claro);
-    border-radius: 16px;
-}
-
-.estilo-card-certificados {
-    background: linear-gradient(135deg, var(--nuevo1) 0%, var(--purpura) 60%, var(--nuevo2) 100%);
-    box-shadow: 5px 5px var(--nuevo1);
-    color: var(--blanco);
-    border: 3px solid var(--nuevo3);
-    border-radius: 16px;
-}
-
-.tarjeta-conocimientos {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 0px 10px;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-conocimientos h4{
-    font-family: "Story Script", sans-serif;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.tarjeta-conocimientos:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--purpura);
-    background: var(--nuevo3);
-    border: 2px solid var(--nuevo1);
-}
-
-.tarjeta-conocimientos:hover p{
-    color: var(--blanco);
-}
-
+/* ==========================================================================
+   CONFIGURACIONES DE LA SECCIÓN PREMIOS
+   ========================================================================== */
 .premios {
     display: flex;
     flex-direction: column;
@@ -327,7 +335,7 @@ article p {
 
 .tarjeta-premios h4 {
     font-size: 1.25rem;
-    color: var(--nuevo1);
+    color: var(--indigo);
 }
 
 .tarjeta-premios{
@@ -345,12 +353,12 @@ article p {
     margin-top: 0px;
     padding: 5px;
     text-decoration: none;
-    color: var(--nuevo2);
+    color: var(--morado-neon);
 }
 
 .tarjeta-premios h5 {
     font-size: 1rem;
-    color: var(--nuevo1);
+    color: var(--indigo);
 }
 
 .tarjeta-premios:hover {
@@ -358,6 +366,9 @@ article p {
     box-shadow: 0px 5px var(--purpura);
 }
 
+/* ==========================================================================
+   CONFIGURACIONES DE LA SECCIÓN CERTIFICADOS
+   ========================================================================== */
 .certificados {
     display: flex;
     flex-direction: row;
@@ -451,10 +462,6 @@ article p {
     padding: 20px;
 }
 
-.oculto{
-    display: none;
-}
-
 .tarjeta-platzi{
     width: 70%;
     align-items: center;
@@ -515,6 +522,9 @@ article p {
     color: inherit;
 }
 
+/* ==========================================================================
+   CONFIGURACIONES DE LA SECCIÓN WEBS
+   ========================================================================== */
 .contenedor-tarjetas-webs {
     align-items: center;
     text-align: center;
@@ -540,7 +550,7 @@ article p {
     margin-top: 0px;
     padding: 5px;
     text-decoration: none;
-    color: var(--nuevo2);
+    color: var(--morado-neon);
 }
 
 .tarjeta-webs h4 {
@@ -556,16 +566,27 @@ article p {
     box-shadow: 0px 5px var(--purpura);
 }
 
-.fondo-hover{
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--purpura);
-    background: var(--nuevo3);
-    border: 2px solid var(--nuevo1);
+/* ==========================================================================
+   CONFIGURACIONES DE LA SECCIÓN CONTACTO
+   ========================================================================== */
+.contenedor-contacto{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 20px;
 }
 
-.hover-titulos{
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--purpura);
+.contacto-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.iconos-contacto{
+    height: 33px;
+    width: 33px;
 }
 
 #Boton-llamar {
@@ -574,9 +595,9 @@ article p {
 }
 
 #Boton-llamar:hover {
-    background: var(--nuevo3);
+    background: var(--purpura-claro);
     color: var(--blanco);
-    border: 2px solid var(--nuevo1);
+    border: 2px solid var(--indigo);
 }
 
 #Boton-correo {
@@ -585,9 +606,9 @@ article p {
 }
 
 #Boton-correo:hover {
-    background: var(--nuevo3);
+    background: var(--purpura-claro);
     color: var(--blanco);
-    border: 2px solid var(--nuevo1);
+    border: 2px solid var(--indigo);
 }
 
 #Instagram {
@@ -595,10 +616,16 @@ article p {
 }
 
 /* ==========================================================================
+   CONFIGURACIONES DE LA CLASE OCULTA
+   ========================================================================== */
+.oculto{
+    display: none;
+}
+
+/* ==========================================================================
    1. PANTALLAS GRANDES / PC (Más de 1025px)
    ========================================================================== */
 @media screen and (min-width: 1024px) {
-  /* Aquí van tus reglas actuales para posicionar las cajas a los lados */
   .texto-html, .texto-css, .texto-js {
     left: 1%;
   }
@@ -643,7 +670,6 @@ article p {
     width: 85%;
   }
 
-  /* Cajas de texto emergentes en tablet */
   div[class^="texto-"] {
     position: fixed;
     left: 50% !important;
@@ -659,15 +685,15 @@ article p {
 
   .botones a {
     box-shadow: 2px 2px var(--morado-claro);
-    border: 1px solid var(--nuevo2);
+    border: 1px solid var(--morado-neon);
     border-radius: 16px;
     padding: 5px 3px;
     font-size: 0.9rem;
   }
 
   .botones:hover a {
-    box-shadow: 2px 2px var(--nuevo3);
-    border: 1px solid var(--nuevo1);
+    box-shadow: 2px 2px var(--purpura-claro);
+    border: 1px solid var(--indigo);
   }
 
   .contenedor-global-certificados{
@@ -718,7 +744,6 @@ article p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Cajas como tarjeta emergente abajo */
   div[class^="texto-"] {
     position: fixed;
     left: 50% !important;
