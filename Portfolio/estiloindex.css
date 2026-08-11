@@ -57,7 +57,7 @@ header {
   left: 0;
   width: 100%;
   background-color: var(--indigo);
-  padding: 0px;
+  padding: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -375,7 +375,7 @@ article p {
     gap: 20px;
 }
 
-#tituloPlatzi {
+#tituloPlatzi, #tituloUdemy, #tituloIBM {
     align-items: center;
     padding: 20px;
     width: 70%;
@@ -386,43 +386,7 @@ article p {
     flex-direction: column;
 }
 
-#tituloPlatzi:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--purpura);
-}
-
-#tituloUdemy {
-    align-items: center;
-    padding: 20px;
-    width: 70%;
-    margin-right: 20px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-
-#tituloUdemy:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--purpura);
-}
-
-#tituloIBM {
-    padding: 20px;
-    width: 70%;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    align-items: center;
-    padding: 20px;
-    width: 70%;
-    margin-right: 20px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-
-#tituloIBM:hover {
+#tituloPlatzi:hover, #tituloUdemy:hover, #tituloIBM:hover {
     transform: translateY(-10px);
     box-shadow: 0px 5px var(--purpura);
 }
@@ -432,7 +396,7 @@ article p {
     flex-direction: column; 
 }
 
-.contenedor-tarjetas-platzi {
+.contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm {
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -442,27 +406,7 @@ article p {
     padding: 20px;
 }
 
-.contenedor-tarjetas-udemy {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.contenedor-tarjetas-ibm {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.tarjeta-platzi{
+.tarjeta-platzi, .tarjeta-udemy, .tarjeta-ibm{
     width: 70%;
     align-items: center;
     text-align: center;
@@ -472,52 +416,12 @@ article p {
     transition: transform 0.3s ease;
 }
 
-.tarjeta-platzi:hover {
+.tarjeta-platzi:hover, .tarjeta-udemy:hover, .tarjeta-ibm:hover{
     transform: translateY(-10px);
     box-shadow: 0px 5px var(--lila);
 }
 
-.tarjeta-platzi a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.tarjeta-udemy{
-    width: 70%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-udemy:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--lila);
-}
-
-.tarjeta-udemy a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.tarjeta-ibm{
-    width: 70%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-ibm:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px var(--lila);
-}
-
-.tarjeta-ibm a {
+.tarjeta-platzi a, .tarjeta-udemy a, .tarjeta-ibm a{
     text-decoration: none;
     color: inherit;
 }
@@ -642,7 +546,7 @@ article p {
 /* ==========================================================================
    2. TABLETS (Entre 601px y 1024px)
    ========================================================================== */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 1023px) {
 
   .banner-content {
     flex-direction: column;
@@ -672,8 +576,8 @@ article p {
 
   div[class^="texto-"] {
     position: fixed;
-    left: 50% !important;
-    top: 50% !important;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
     max-width: 500px;
@@ -746,8 +650,8 @@ article p {
 
   div[class^="texto-"] {
     position: fixed;
-    left: 50% !important;
-    top: 50% !important;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
     max-width: 500px;
