@@ -372,14 +372,16 @@ article p {
 .certificados {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
     gap: 20px;
 }
 
 #tituloPlatzi, #tituloUdemy, #tituloIBM {
     align-items: center;
     padding: 20px;
-    width: 70%;
-    margin-right: 20px;
+    width: 100%;
+    margin: 0 0 15px 0;
     transition: transform 0.3s ease;
     cursor: pointer;
     display: flex;
@@ -394,20 +396,21 @@ article p {
 .contenedor-global-certificados{
     display: flex;
     flex-direction: column; 
+    flex: 1;
 }
 
 .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm {
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
 .tarjeta-platzi, .tarjeta-udemy, .tarjeta-ibm{
-    width: 70%;
+    width: 100%;
     align-items: center;
     text-align: center;
     justify-content: center;
