@@ -469,11 +469,28 @@ article p {
 /* ==========================================================================
    CONFIGURACIONES DE LA SECCIÓN CONTACTO
    ========================================================================== */
-.contenedor-contacto{
+footer {
+    background-color: var(--indigo);
+}
+
+footer h3 {
+    font-size: 2rem;
+}
+
+#Contacto {
+    color: var(--morado-claro);
+}
+
+.contenedor-contacto {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 0px;
-    gap: 20px;
+    gap: 100px;
+}
+
+.contenedor-contacto p {
+    color: var(--blanco);
 }
 
 .contacto-botones{
@@ -513,10 +530,6 @@ article p {
     background: var(--purpura-claro);
     color: var(--blanco);
     border: 2px solid var(--indigo);
-}
-
-#Instagram {
-    cursor: pointer;
 }
 
 /* ==========================================================================
