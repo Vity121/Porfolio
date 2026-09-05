@@ -86,12 +86,6 @@ header h2 {
     font-size: 3rem;
 }
 
-.frase-definitoria p{
-    color: var(--morado-claro);
-    font-style: italic;
-    font-family: "Story Script", sans-serif;
-}
-
 .contenedor-botones{
     display: flex;
     flex-direction: row;
@@ -251,7 +245,6 @@ article p {
 
 .texto-java, .texto-python, .texto-mysql{
     position: fixed;
-    top: 20%;
     left: 76%;
     display: flex;
     flex-direction: column;
@@ -268,32 +261,32 @@ article p {
 }
 
 .texto-html{
-    top: 24%;
+    top: 20%;
     z-index: 2000;
 }
 
 .texto-css{
-    top: 39%;
+    top: 45%;
     z-index: 2000;
 }
 
 .texto-js{
-    top: 52%;
+    top: 67%;
     z-index: 2000;
 }
 
 .texto-java{
-    top: 24%;
+    top: 20%;
     z-index: 2000;
 }
 
 .texto-python{
-    top: 37%;
+    top: 42%;
     z-index: 2000;
 }
 
 .texto-mysql{
-    top: 52%;
+    top: 64%;
     z-index: 2000;
 }
 
@@ -507,12 +500,16 @@ article p {
     border: 2px solid var(--indigo);
 }
 
-#Boton-correo {
+#Boton-correo, #Boton-linkedin {
     padding: 2px;
     text-decoration: none
 }
 
-#Boton-correo:hover {
+#Boton-linkedin {
+    max-height: 27px;
+}
+
+#Boton-correo:hover, #Boton-linkedin:hover {
     background: var(--purpura-claro);
     color: var(--blanco);
     border: 2px solid var(--indigo);

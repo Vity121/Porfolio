@@ -81,18 +81,3 @@ telefono.addEventListener('click', function(e) {
   }
 });
 
-const imagenInstagram = document.querySelector('#Instagram');
-const rutaOriginal = "media/instagram.png";
-const rutaHover = "media/instagram-color.png";
-
-// Cuando el ratón entra en la imagen
-imagenInstagram.addEventListener('mouseenter', () => {
-  console.log("1");
-  imagenInstagram.src = rutaHover;
-});
-
-// Cuando el ratón sale de la imagen
-imagenInstagram.addEventListener('mouseleave', () => {
-  imagenInstagram.src = rutaOriginal;
-  console.log("2");
-});
