@@ -226,81 +226,57 @@ article p {
     color: var(--blanco);
 }
 
-.texto-html, .texto-css, .texto-js{
+/* ==========================================================================
+   COLUMNAS Y TARJETAS FLOTANTES
+   ========================================================================== */
+.columna-flotante {
     position: fixed;
-    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Margen idéntico e invariable entre tarjetas */
+    z-index: 2000;
+    pointer-events: none; /* Permite hacer click detrás en las zonas vacías */
+}
+
+.flotante-izq {
+    left: 2%;
+}
+
+.flotante-der {
+    right: 2%;
+}
+
+.estilo-flotante {
+    pointer-events: auto; /* Restaura la interacción al hacer click en la tarjeta */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 23%;
-    box-sizing: border-box;
+    width: 100%;
     background: var(--purpura-claro);
     box-shadow: 3px 3px var(--purpura-claro);
     color: var(--blanco);
     border: 2px solid var(--indigo);
     border-radius: 16px;
-    padding: 5px 8px;
+    padding: 12px 16px;
 }
 
-.texto-java, .texto-python, .texto-mysql{
-    position: fixed;
-    left: 76%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 23%;
-    box-sizing: border-box;
-    background: var(--purpura-claro);
-    box-shadow: 3px 3px var(--purpura-claro);
-    color: var(--blanco);
-    border: 2px solid var(--indigo);
-    border-radius: 16px;
-    padding: 5px 8px;
-}
-
-.texto-html{
-    top: 20%;
-    z-index: 2000;
-}
-
-.texto-css{
-    top: 45%;
-    z-index: 2000;
-}
-
-.texto-js{
-    top: 67%;
-    z-index: 2000;
-}
-
-.texto-java{
-    top: 20%;
-    z-index: 2000;
-}
-
-.texto-python{
-    top: 42%;
-    z-index: 2000;
-}
-
-.texto-mysql{
-    top: 64%;
-    z-index: 2000;
-}
-
-.texto-html h4, .texto-css h4, .texto-js h4, .texto-java h4, .texto-python h4, .texto-mysql h4{
-    font-size: 2rem;
+.estilo-flotante h4 {
+    font-size: 1.5rem;
     text-decoration: underline;
     text-align: center;
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 
-.texto-html p, .texto-css p, .texto-js p, .texto-java p, .texto-python p, .texto-mysql p{
+.estilo-flotante p {
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -576,13 +552,6 @@ footer h3 {
     font-size: 1.25rem;
   }
 
-  .contenedor-botones {
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 0;
-  }
-
   .contenedor-conocimientos {
     width: 85%;
   }
@@ -631,6 +600,14 @@ footer h3 {
 
   #Boton-llamar {
     display: inline-block;
+  }
+
+  .columna-flotante {
+    width: 85%;
+    max-width: 450px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
   }
 }
 
