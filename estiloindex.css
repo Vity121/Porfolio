@@ -519,12 +519,6 @@ footer h3 {
    1. PANTALLAS GRANDES / PC (Más de 1025px)
    ========================================================================== */
 @media screen and (min-width: 1024px) {
-  .texto-html, .texto-css, .texto-js {
-    left: 1%;
-  }
-  .texto-java, .texto-python, .texto-mysql {
-    left: 76%;
-  }
   .contenedor-conocimientos {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -583,19 +577,26 @@ footer h3 {
   }
 
   .contenedor-global-certificados{
+    width: 100%;
     gap: 0px;
   }
 
   .certificados{
     flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    margin: 0 auto;
+    gap: 15px;
   }
 
   #tituloPlatzi, #tituloUdemy, #tituloIBM{
     width: 100%;
+    box-sizing: border-box;
   }
 
   .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm{
     width: 100%;
+    box-sizing: border-box;
   }
 
   #Boton-llamar {
@@ -609,6 +610,10 @@ footer h3 {
     right: auto;
     transform: translate(-50%, -50%);
   }
+
+  .certificados {
+    align-items: center;
+  }
 }
 
 /* ==========================================================================
@@ -620,8 +625,10 @@ footer h3 {
     padding: 2px;
   }
 
-  .contenedor-botones{
-    display: none;
+  .contenedor-contacto{
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
   }
 
   header h1 {
@@ -651,26 +658,31 @@ footer h3 {
     scroll-margin-top: 180px;
   }
 
-  .contenedor-global-certificados{
+  .contenedor-global-certificados {
+    width: 100%;
     gap: 0px;
   }
 
-  .certificados{
+  .certificados {
     flex-direction: column;
-  }
-
-  #tituloPlatzi, #tituloUdemy, #tituloIBM{
-    width: 90%;
+    align-items: stretch;
+    width: 95%;          
     margin: 0 auto;
+    gap: 15px;
   }
 
-  .contenedor-tarjetas-platzi, .contenedor-tarjetas-udemy, .contenedor-tarjetas-ibm{
-    width: 90%;
-    margin: 0 auto;
+  #tituloPlatzi, #tituloUdemy, #tituloIBM {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
   }
 
-  .contenedor-contacto{
-    flex-direction: column;
+  .contenedor-tarjetas-platzi, 
+  .contenedor-tarjetas-udemy, 
+  .contenedor-tarjetas-ibm {
+    width: 100%;          
+    box-sizing: border-box;
+    padding: 10px;        
   }
 
   #Boton-llamar {
@@ -679,5 +691,17 @@ footer h3 {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+  }
+
+  .columna-flotante {
+    width: 85%;
+    max-width: 450px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .certificados {
+    align-items: center;
   }
 }
